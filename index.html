@@ -26,3 +26,40 @@
 </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Orde Reaksi</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h2>Waktu vs Absorbansi</h2>
+
+<table border="1" id="dataTable">
+  <tr>
+    <th>Waktu (t)</th>
+    <th>Absorbansi (A)</th>
+  </tr>
+  <tr>
+    <td><input type="number"></td>
+    <td><input type="number" step="any"></td>
+  </tr>
+  <tr>
+    <td><input type="number"></td>
+    <td><input type="number" step="any"></td>
+  </tr>
+  <tr>
+    <td><input type="number"></td>
+    <td><input type="number" step="any"></td>
+  </tr>
+</table>
+
+<button onclick="hitung()">Hitung</button>
+
+<p id="hasil"></p>
+<canvas id="grafik"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
