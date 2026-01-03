@@ -14,14 +14,3 @@ function hitung() {
         "<br>Konstanta laju Orde 2 (k₂): " + k2.toFixed(4);
 }
 
-function hitung(){
-  let text = document.getElementById("data").value;
-  let rows = text.trim().split("\n").slice(1);
-  let t=[], C=[];
-  rows.forEach(r=>{
-    let [x,y]=r.split(",");
-    t.push(Number(x));
-    C.push(Number(y));
-  });
-  console.log(t, C);
-}
