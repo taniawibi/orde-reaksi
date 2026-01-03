@@ -25,3 +25,13 @@ function hitung(){
   });
   console.log(t, C);
 }
+
+<textarea id="data">
+t,C
+0,10
+1,7
+2,5
+3,3.6
+</textarea>
+
+<button onclick="hitung()">Hitung</button>
