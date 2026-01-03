@@ -14,3 +14,13 @@ function hitung() {
         "<br>Konstanta laju Orde 2 (k₂): " + k2.toFixed(4);
 }
 
+let tabel = document.getElementById("tabel");
+
+for (let i = 0; i < t.length; i++) {
+  tabel.innerHTML += `
+    <tr>
+      <td>${t[i]}</td>
+      <td>${C[i]}</td>
+    </tr>
+  `;
+}
