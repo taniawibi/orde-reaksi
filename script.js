@@ -14,13 +14,14 @@ function hitung() {
         "<br>Konstanta laju Orde 2 (k₂): " + k2.toFixed(4);
 }
 
-let tabel = document.getElementById("tabel");
+let t = document.getElementById("t").value
+  .split(",")
+  .map(x => Number(x.trim()));
 
-for (let i = 0; i < t.length; i++) {
-  tabel.innerHTML += `
-    <tr>
-      <td>${t[i]}</td>
-      <td>${C[i]}</td>
-    </tr>
-  `;
+let c = document.getElementById("c").value
+  .split(",")
+  .map(x => Number(x.trim()));
+
+if (t.includes(NaN) || c.includes(NaN)) {
+  alert("Input harus angka dan pakai titik (.)");
 }
