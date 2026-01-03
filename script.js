@@ -46,3 +46,35 @@ function hitung() {
 
   grafik(t, A);
 }
+
+function r2(x, y) {
+  let n = x.length;
+  let sx=0, sy=0, sxy=0, sx2=0, sy2=0;
+
+  for (let i=0;i<n;i++){
+    sx+=x[i]; sy+=y[i];
+    sxy+=x[i]*y[i];
+    sx2+=x[i]*x[i];
+    sy2+=y[i]*y[i];
+  }
+
+  let r = (n*sxy - sx*sy) /
+          Math.sqrt((n*sx2 - sx*sx)*(n*sy2 - sy*sy));
+  return r*r;
+}
+
+function grafik(t, A){
+  if (window.chart) window.chart.destroy();
+
+  window.chart = new Chart(document.getElementById("grafik"),{
+    type: 'line',
+    data: {
+      labels: t,
+      datasets: [{
+        label: 'Absorbansi vs Waktu',
+        data: A,
+        fill: false
+      }]
+    }
+  });
+}
